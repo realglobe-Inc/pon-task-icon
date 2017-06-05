@@ -79,10 +79,15 @@ const ponTaskIcon = require('pon-task-icon')
 
 async function tryExample () {
   let run = pon({
-    myTask01: ponTaskIcon()
+    'icon:generate': ponTaskIcon('assets/icons/favicon.png', {
+      text: 'THE',
+      color: '#381',
+      shape: 'a',
+      font: 'j'
+    })
   })
 
-  run('myTask01')
+  run('icon:generate')
 }
 
 tryExample()
@@ -100,13 +105,20 @@ Signatures
 ---------
 
 
-### `define(options) -> function`
+### `define(filename, options) -> function`
 
-Define task
+Define task to generate icon
 
 | Param | type | Description |
 | ---- | --- | ----------- |
+| filename | string |  File name to generate |
 | options | Object |  Optional settings |
+| options.size | number |  Size of favicon |
+| options.shape | string |  Theme of shape |
+| options.color | string |  Favicon color |
+| options.font | string |  Theme of font |
+| options.text | string |  Text of favicon |
+| options.fontSize | string |  Size of font |
 
 
 
