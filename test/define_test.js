@@ -7,20 +7,11 @@
 const define = require('../lib/define.js')
 const ponContext = require('pon-context')
 const { ok } = require('assert')
-const co = require('co')
 
 describe('define', function () {
-  this.timeout(3000)
+  this.timeout(30000)
 
-  before(() => co(function * () {
-
-  }))
-
-  after(() => co(function * () {
-
-  }))
-
-  it('Define', () => co(function * () {
+  it('Define', async () => {
     let ctx = ponContext()
     let task = define(
       `${__dirname}/foo/bar.png`,
@@ -32,8 +23,8 @@ describe('define', function () {
     )
     ok(task)
 
-    yield Promise.resolve(task(ctx))
-  }))
+    await Promise.resolve(task(ctx))
+  })
 })
 
 /* global describe, before, after, it */
