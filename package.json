@@ -24,7 +24,7 @@
   "homepage": "https://github.com/realglobe-Inc/pon-task-icon#readme",
   "dependencies": {
     "amkdirp": "^2.0.0",
-    "fur": "^7.0.0"
+    "fur": "^7.0.2"
   },
   "devDependencies": {
     "ababel": "^5.0.6",
