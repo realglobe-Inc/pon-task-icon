@@ -1,6 +1,6 @@
 {
   "name": "pon-task-icon",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Pon task to generate icon",
   "main": "lib",
   "browser": "shim/browser",
